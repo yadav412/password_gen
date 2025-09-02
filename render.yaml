@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: password-gen
+    env: python
+    buildCommand: ""
+    startCommand: python "password gen.py"
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
