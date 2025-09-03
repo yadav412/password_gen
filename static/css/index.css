@@ -2,12 +2,12 @@ body{
 
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin-top: 300px;
+    margin-top: 280px;
     padding: 20px;
     text-align: center;
     align-items: center;
     
-    background: image url(kpop-demon-hunters-eating-ramen-532@5@g.jpg) no-repeat center center fixed;
+    background: image url("kpop-demon-hunters-eating-ramen-532@5@g.jpg") no-repeat center center fixed;
     background-size: cover;
     background-color: #00000065;
 }
