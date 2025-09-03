@@ -1,0 +1,27 @@
+body::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #5a3d3d65;
+}
+
+body{
+
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    background: image url("kpop-demon-hunters-eating-ramen-532@5@g.jpg") no-repeat center center fixed ;
+    background-size: cover ;
+}
+   
+
+
+

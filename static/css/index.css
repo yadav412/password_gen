@@ -2,8 +2,13 @@ body{
 
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin: 0;
+    margin-top: 300px;
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.395);
+    align-items: center;
+    
+    background: image url(kpop-demon-hunters-eating-ramen-532@5@g.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-color: #00000065;
 }
+
