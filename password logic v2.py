@@ -9,22 +9,36 @@ sp= ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+", "|", ":", ";", 
 
 def generate_password(length):
     password=[]
-    password1=""
+    password=""
     for i in range(length):
         if i%4== 0:
-            password.append(secret.choice(random.choice(sp))) # adding in a mandatory special character
+            password.append(secret.choice(sp)) # adding in a mandatory special character
         else:
             password.append(secret.choice (string.ascii_letters or string.digits ))
 
     random.shuffle(password) # shuffling this should be rewriten to be more secure then using and exsisting library
 
     for i in range(len(password)):
-        password1=password1+ str(password[i])
+        password=password+ str(password[i])
       
-    return password1
+    return password
 
 
+def generate_pin(length):
+    password=[]
+    password11=""
+    for i in range(length):
+        if i%4== 0:
+            password.append(secret.choice(sp)) # adding in a mandatory special character
+        else:
+            password.append(secret.choice (string.ascii_letters or string.digits ))
 
+    random.shuffle(password) # shuffling this should be rewriten to be more secure then using and exsisting library
+
+    for i in range(len(password)):
+        password11=password11+ str(password[i])
+      
+    return password11
 
 #coding logic rewrite complexity
 

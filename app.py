@@ -4,7 +4,7 @@ import random
 import string
 import secrets as secret
 
-#should be be more robust and not rely on library functions
+#should be more robust and not rely on library functions
 
 sp= ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+", "|", ":", ";", "'", "<", ">", ",", ".", "?", "/"]
 
@@ -17,9 +17,9 @@ def generate_password(length):
         if i%4== 0:
             password.append(secret.choice(random.choice(sp))) # adding in a mandatory special character
         else:
-            password.append(secret.choice (string.ascii_letters or string.digits ))
+            password.append(secret.choice(string.ascii_letters + string.digits))
 
-    random.shuffle(password) # shuffling this should be rewriten to be more secure then using and exsisting library
+    random.shuffle(password) # shuffling this should be rewritten to be more secure than using an existing library
 
     for i in range(len(password)):
         password1=password1+ str(password[i])
@@ -39,6 +39,8 @@ def index():
         password = generate_password(length)
         return render_template('index.html', password=password)
     return render_template('index.html', password=None)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
