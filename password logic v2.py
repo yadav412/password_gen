@@ -1,5 +1,3 @@
-#random password generator
-from flask import Flask, render_template, request
 import random
 import string
 import secrets as secret
@@ -8,7 +6,6 @@ import secrets as secret
 
 sp= ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+", "|", ":", ";", "'", "<", ">", ",", ".", "?", "/"]
 
-app= Flask(__name__)
 
 def generate_password(length):
     password=[]
@@ -31,14 +28,8 @@ def generate_password(length):
 
 #coding logic rewrite complexity
 
-@app.route('/', methods=['GET', 'POST'])
 
-def index():
-    if request.method == 'POST':
-        length = int(request.form['length'])
-        password = generate_password(length)
-        return render_template('index.html', password=password)
-    return render_template('index.html', password=None)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+
+print(generate_password(8))
