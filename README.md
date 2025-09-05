@@ -6,6 +6,8 @@ A secure and customizable password generator web application built with Flask.
 
 v 1.0 - minimal styling, backend is a simple but effective python algo that allows password generation of 4-64 chars using the flask framework. This version of the application is deployed using render (free tier) - 13 commits
 
+v 1.1 - addition of a pin generator as well as a basic encryption algo these are coded by have yet to be part of the release - the "chimera encryption algo" has its base created but with additions it should be strengthened. - 25 commits
+
 ## Features
 
 - Generate strong passwords of customizable length (4–64 characters)
