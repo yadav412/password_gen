@@ -44,7 +44,7 @@ def generate_pin(length):
 
 #basic encryption logic // ceaser(modded) cipher shift 
 
-#common_words =["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "dog", "cat", "man", "woman", "child", "car", "house", "tree", "food", "water"]
+common_words =["the", "be", "to", "of", "and", "a", "in", "that", "have", "I", "dog", "cat", "man", "woman", "child", "car", "house", "tree", "food", "water"]
 Plain = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 Cipher = ["X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W"]
 
@@ -52,15 +52,17 @@ Cipher = ["X", "Y", "Z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", 
 #chaining multiple encryptions together to make it more complex - the encryption 
 
 #the encryption engine will be made more complex in future iterations "Chimera Encryption Engine"
-
+    
 
 def encryptceaser(message):
-    
     em=""
     for i in range(len(message)):
         for j in range(len(Plain)):
             if message[i] == Plain[j]:
                 em= em + Cipher[j]
+            elif message[i] == " ":
+                em= em + " "
+    
     return em
 
 def Dencryptceaser(message): #works are ceaser cipher ecryption (happy accident)
@@ -70,16 +72,28 @@ def Dencryptceaser(message): #works are ceaser cipher ecryption (happy accident)
         for j in range(len(Plain)):
             if message[i] == Cipher[j]:
                 em= em + Plain[j]
+            elif message[i] == " ":
+                em= em + " "
     return em
 
+gp = generate_password(8)
+gp = gp.upper()
+
+for i in range(len(common_words)):
+    if gp.lower()== common_words[i]:
+        print("Regenerate password")
+        gp = generate_password(8)
+        gp = gp.upper()
+#  weak password catch
 
 
-print(encryptceaser("HELLO"))
-
-print(Dencryptceaser("HELLO"))
-
-print(Dencryptceaser("EBIIL")) #the decryption logic works basic decryption and encryption is functional
-
+print(gp)
+d=(encryptceaser(gp))
+print(d)
+print(Dencryptceaser(d))
 
 
-print(generate_password(8))
+#the decryption logic works basic decryption and encryption is functional
+
+
+
