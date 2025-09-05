@@ -96,4 +96,8 @@ print(Dencryptceaser(d))
 #the decryption logic works basic decryption and encryption is functional
 
 
+# 3 dig encryption key in front of the password used to identify the user ie 8 dig 3 pin then random generator pk
+
+
+#password engine, - add user database
 
