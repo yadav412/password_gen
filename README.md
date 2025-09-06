@@ -10,7 +10,7 @@ v 1.1 - addition of a pin generator as well as a basic encryption algo these are
 
 ## Features
 
-- Generate strong passwords of customizable length (4–64 characters)
+- Generate strong passwords of customizable length (12–64 characters)
 - Simple, user-friendly web interface
 - Secure password generation algorithm
 - Deployed on Render (free tier)
