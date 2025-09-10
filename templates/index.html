@@ -10,13 +10,20 @@
     <h2>Password Generator</h2>
     <form method="post">
       <label>Length:</label>
-      <input type="number" name="length" min="4" max="64" required />
+      <input type="number" name="length" min="12" max="64" required />
       <button type="submit">Generate</button>
     </form>
 
     {% if password %}
     <p><b>Your Password:</b> {{password}}</p>
     {% endif %}
+  
+
+
+
+
+
+
   </body>
 </html>
 

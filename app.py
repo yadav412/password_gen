@@ -4,15 +4,32 @@ import random
 import string
 import secrets as secret
 
-app= Flask(__name__)
+#should be more robust and not rely on library functions
 
 sp= ["!", "@", "#", "$", "%", "^", "&", "*", "-", "_", "=", "+", "|", ":", ";", "'", "<", ">", ",", ".", "?", "/"]
 
+app= Flask(__name__)
+
 def generate_password(length):
-    password= ""
+    password=[]
+    password1=""
     for i in range(length):
-        password = password + secret.choice (string.ascii_letters + string.digits + random.choice(sp))
-    return password
+        if i%4== 0:
+            password.append(secret.choice(random.choice(sp))) # adding in a mandatory special character
+        else:
+            password.append(secret.choice(string.ascii_letters + string.digits))
+
+    random.shuffle(password) # shuffling this should be rewritten to be more secure than using an existing library
+
+    for i in range(len(password)):
+        password1=password1+ str(password[i])
+      
+    return password1
+
+
+
+
+#coding logic rewrite complexity
 
 @app.route('/', methods=['GET', 'POST'])
 
@@ -22,6 +39,8 @@ def index():
         password = generate_password(length)
         return render_template('index.html', password=password)
     return render_template('index.html', password=None)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
