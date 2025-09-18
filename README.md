@@ -1,6 +1,7 @@
-[https://password-gen-mblc.onrender.com/]
 
 # Password Generator
+
+[![Live site](https://img.shields.io/badge/demo-online-brightgreen)](https://password-gen-mblc.onrender.com)
 
 A secure and customizable password generator web application built with Flask.
 
